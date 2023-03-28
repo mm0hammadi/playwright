@@ -56,4 +56,6 @@ Open `http://localhost:3000` with your browser to see the result.
    - "coverage": "vitest run --coverage",
    - "play:test": "npx playwright test"
 
+### Report html
+  npx playwright show-report
 
