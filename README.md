@@ -22,11 +22,11 @@ project automation of playwright tests and ts-vite
 
 ```
 # yarn
-yarn create next-app -e https://github.com/jpedroschmitz/typescript-nextjs-starter
+yarn install
 # npm
-npx create-next-app -e https://github.com/jpedroschmitz/typescript-nextjs-starter
+npm install
 # pnpm
-pnpm create next-app -e https://github.com/jpedroschmitz/typescript-nextjs-starter
+pnpm install
 ```
 
 ### Development
