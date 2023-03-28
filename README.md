@@ -17,6 +17,10 @@ project automation of playwright tests and ts-vite
 - 📏 ESLint — To find and fix problems in your code
 - 💖 Prettier — Code Formatter for consistent style
 - 👷  Workflow — Run Tests
+- 👷  Redux Toolkit
+- 👷  Tanstack/react-query
+- 📏  lodash
+- 📏  typescript
 
 
 
