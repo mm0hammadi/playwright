@@ -29,12 +29,19 @@ npm install
 pnpm install
 ```
 
+Run Project:
+#npm
+npm run dev
+#yarn
+yarn run dev
+
 ### Development
 
 To start the project locally, run:
 
 ```bash
 pnpm dev
+npm run dev
 ```
 
 Open `http://localhost:3000` with your browser to see the result.
