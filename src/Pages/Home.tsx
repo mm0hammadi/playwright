@@ -31,7 +31,7 @@ const Home: FC = () => {
             <Categories setCategory={setCategory} />
             <Sort setSort={setSort} />
           </div>
-          <h2 className="content__title">Все пиццы</h2>
+          <h2 className="content__title">همه دسته بندی ها </h2>
           <div className="content__items">
             {isLoading ? (
               <>
