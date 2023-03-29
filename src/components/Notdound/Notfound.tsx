@@ -1,4 +1,4 @@
-import styles from './notfound.module.scss'
+import styles from "./notfound.module.scss";
 
 const Notfound = () => {
   return (
@@ -6,11 +6,13 @@ const Notfound = () => {
       <h1>
         <span>😕</span>
         <br />
-        Ничего не найдено
+        چیزی پیدا نشد
       </h1>
-      <p className={styles.description}>К сожалени данная страница отсутствует в нашем интернет-магазине</p>
+      <p className={styles.description}>
+        متاسفانه این صفحه در فروشگاه اینترنتی ما موجود نیست
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default Notfound
+export default Notfound;
