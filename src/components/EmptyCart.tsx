@@ -1,23 +1,23 @@
-import Empty from '../assets/img/empty-cart.png'
-import { Link } from 'react-router-dom'
+import Empty from "../assets/img/empty-cart.png";
+import { Link } from "react-router-dom";
 
 const EmptyCart = () => {
   return (
     <div className="cart cart--empty">
-      <h2>Корзина пустая 😕</h2>
+      <h2>سبد خالی است 😕</h2>
       <p>
-        Вероятней всего, вы не заказывали ещё пиццу.
+        احتمالا هنوز پیتزا سفارش نداده اید.
         <br />
-        Для того, чтобы заказать пиццу, перейди на главную страницу.
+        برای سفارش پیتزا به صفحه اصلی بروید.{" "}
       </p>
       <img src={Empty} alt="Empty cart" />
       <Link to="/">
         <span className="button button--black">
-          <span>Вернуться назад</span>
+          <span>صفحه اصلی</span>
         </span>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default EmptyCart
+export default EmptyCart;
