@@ -1,11 +1,11 @@
-import { Suspense, lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Home from './Pages/Home'
+import { Suspense, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
 
-const MainLayout = lazy(() => import('./Layout/MainLayout'))
-const Cart = lazy(() => import('./Pages/Cart'))
-const FullPizza = lazy(() => import('./Pages/FullPizza'))
-const NotFound = lazy(() => import('./Pages/NotFound'))
+const MainLayout = lazy(() => import("./Layout/MainLayout"));
+const Cart = lazy(() => import("./Pages/Cart"));
+const FullPizza = lazy(() => import("./Pages/FullPizza"));
+const NotFound = lazy(() => import("./Pages/NotFound"));
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route
           path="/cart"
           element={
-            <Suspense fallback={<div>Идёт загрузка корзины...</div>}>
+            <Suspense fallback={<div>سبد خرید در حال بارگیری است </div>}>
               <Cart />
             </Suspense>
           }
@@ -23,7 +23,7 @@ function App() {
         <Route
           path="/pizza/:id"
           element={
-            <Suspense fallback={<div>Идёт загрузка...</div>}>
+            <Suspense fallback={<div>...در حال بارگیری </div>}>
               <FullPizza />
             </Suspense>
           }
@@ -31,14 +31,14 @@ function App() {
         <Route
           path="*"
           element={
-            <Suspense fallback={<div>Идёт загрузка...</div>}>
+            <Suspense fallback={<div>در حال بارگیری ...</div>}>
               <NotFound />
             </Suspense>
           }
         />
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

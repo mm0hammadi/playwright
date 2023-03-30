@@ -7,24 +7,24 @@ test('homepage test', async ({ page }) => {
 
   // Categories test
   const categories = page.locator('.categories');
-  await expect(categories.locator('ul > li')).toContainText(['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'])
-  await expect(categories.getByText("Все")).toHaveClass("active")
+  await expect(categories.locator('ul > li')).toContainText(['همه', 'گوشت', 'سبزیجات', 'گریل', 'مخلوط', 'آمریکایی'])
+  await expect(categories.getByText("همه")).toHaveClass("active")
 
   const activated = page.locator('.categories');
-  await activated.getByText('Мясные').click();
-  await expect(activated.getByText("Мясные")).toHaveClass("active")
-  await activated.getByText('Вегетарианская').click();
-  await expect(activated.getByText("Вегетарианская")).toHaveClass("active")
+  await activated.getByText('گوشت').click();
+  await expect(activated.getByText("گوشت")).toHaveClass("active")
+  await activated.getByText('سبزیجات').click();
+  await expect(activated.getByText("سبزیجات")).toHaveClass("active")
 
 
   // Sort test
   const Sort = page.locator('.sort__label');
-  await Sort.getByText('популярности (High);').click();
+  await Sort.getByText('پرطرفدار (High);').click();
 
   const Sorts = page.locator('.sort__popup');
-  await expect(Sorts.locator('ul > li')).toContainText(['популярности (High);', 'популярности (Low)', 'цене (High)', 'цене (Low)', 'алфавиту (High)', 'алфавиту (Low)']);
-  await Sorts.getByText('популярности (Low)').click();
-  await Sort.getByText('популярности (Low)')
+  await expect(Sorts.locator('ul > li')).toContainText(['پرطرفدار (High);', 'پرطرفدار (Low)', 'цене (High)', 'цене (Low)', 'алфавиту (High)', 'алфавиту (Low)']);
+  await Sorts.getByText('پرطرفدار (Low)').click();
+  await Sort.getByText('پرطرفدار (Low)')
 
 
 });
@@ -38,10 +38,10 @@ test('Cart page test', async ({ page }) => {
   await expect(page).toHaveURL("https://pizza-cmmerce.netlify.app/cart");
 
   const HaveaText = page.locator('.cart--empty');
-  await expect(HaveaText.locator('h2')).toHaveText("Корзина пустая 😕")
-  await expect(HaveaText.locator('p')).toHaveText("Вероятней всего, вы не заказывали ещё пиццу.Для того, чтобы заказать пиццу, перейди на главную страницу.")
-  await expect(HaveaText.locator('a > span > span')).toHaveText("Вернуться назад")
-  await HaveaText.getByText("Вернуться назад").click()
+  await expect(HaveaText.locator('h2')).toHaveText("سبد خالی است😕")
+  await expect(HaveaText.locator('p')).toHaveText("به احتمال زیاد هنوز پیتزا سفارش نداده اید .برای سفارش پیتزا به صفحه اصلی بروید")
+  await expect(HaveaText.locator('a > span > span')).toHaveText("صفحه اصلی")
+  await HaveaText.getByText("صفحه اصلی").click()
   await expect(page).toHaveURL("https://pizza-cmmerce.netlify.app/");
 
 });
